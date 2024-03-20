@@ -1,0 +1,12 @@
+on windows use x64 visual studio dev cmd 
+To compile:
+cl /c /EHsc /O2 /MD /fp:strict /Tc FastNoiseLite.cpp
+to build .lib:
+lib /OUT:FastNoiseLite.lib FastNoiseLite.obj
+
+on linux ubuntu use clang++
+to compile:
+clang++ -c -O2 -ffp-contract=off FastNoiseLite.cpp -o FastNoiseLite.o
+to build .a:
+ar rcs libFastNoiseLite.a FastNoiseLite.o
+
